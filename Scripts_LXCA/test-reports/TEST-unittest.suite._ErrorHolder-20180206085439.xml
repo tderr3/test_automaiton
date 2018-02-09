@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="1" failures="0" name="unittest.suite._ErrorHolder-20180206085439" skipped="0" tests="1" time="0.000">
+	<testcase classname="setUpClass (__main__" name="lxcaSetupTest)" time="0.000">
+		<error message="Message: Reached error page: about:neterror?e=connectionFailure&amp;u=https%3A//10.243.1.100/&amp;c=UTF-8&amp;f=regular&amp;d=Firefox%20can%E2%80%99t%20establish%20a%20connection%20to%20the%20server%20at%2010.243.1.100.
+" type="WebDriverException">
+<![CDATA[Traceback (most recent call last):
+  File "C:\Python34\Scripts\eclipse-workspace\Scripts_LXCA\LXCA_Setup_test.py", line 14, in setUpClass
+    inst.driver.get('https://10.243.1.100')
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 320, in get
+    self.execute(Command.GET, {'url': url})
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: Reached error page: about:neterror?e=connectionFailure&u=https%3A//10.243.1.100/&c=UTF-8&f=regular&d=Firefox%20can%E2%80%99t%20establish%20a%20connection%20to%20the%20server%20at%2010.243.1.100.
+
+]]>		</error>
+	</testcase>
+	<system-out>
+<![CDATA[]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

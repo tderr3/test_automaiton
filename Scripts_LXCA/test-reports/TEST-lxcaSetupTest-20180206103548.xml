@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="1" failures="1" name="lxcaSetupTest-20180206103548" skipped="0" tests="10" time="78.961">
+	<testcase classname="lxcaSetupTest" name="test_002_Create_User_Accounts" time="8.890"/>
+	<testcase classname="lxcaSetupTest" name="test_003_Configure_network_settings" time="15.565"/>
+	<testcase classname="lxcaSetupTest" name="test_005_Particapate" time="11.717"/>
+	<testcase classname="lxcaSetupTest" name="test_006_Callhome" time="2.039"/>
+	<testcase classname="lxcaSetupTest" name="test_007_Lenovo_Upload_Facility" time="7.104"/>
+	<testcase classname="lxcaSetupTest" name="test_008_warrenty" time="9.169"/>
+	<testcase classname="lxcaSetupTest" name="test_009_setup_Service_and_Support" time="0.112"/>
+	<testcase classname="lxcaSetupTest" name="test_010_Finish" time="5.120"/>
+	<testcase classname="lxcaSetupTest" name="test_001_Accepting_License_Agreement" time="6.955">
+		<failure message="&lt;selenium.webdriver.firefox.webelement.FirefoxWebElement (session=&quot;4dc900fe-0b13-47f0-a81e-0ef0b9162073&quot;, element=&quot;d5cbde1b-d4f6-409a-aa5e-22238141f5fb&quot;)&gt; is not false" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "C:\Python34\Scripts\eclipse-workspace\Scripts_LXCA\LXCA_Setup_test.py", line 31, in test_001_Accepting_License_Agreement
+    self.assertFalse(self.driver.find_element_by_xpath('//div[1][contains(@class, "floatLeft setupLicense completed")]'))
+AssertionError: <selenium.webdriver.firefox.webelement.FirefoxWebElement (session="4dc900fe-0b13-47f0-a81e-0ef0b9162073", element="d5cbde1b-d4f6-409a-aa5e-22238141f5fb")> is not false
+]]>		</failure>
+	</testcase>
+	<testcase classname="lxcaSetupTest" name="test_004_Configure_NTP_settings" time="12.290">
+		<error message="Message: Unable to locate element: //div[1][contains(@class,&quot;setupDateAndTime completed&quot;)]
+" type="NoSuchElementException">
+<![CDATA[Traceback (most recent call last):
+  File "C:\Python34\Scripts\eclipse-workspace\Scripts_LXCA\LXCA_Setup_test.py", line 98, in test_004_Configure_NTP_settings
+    self.assertTrue(self.driver.find_element_by_xpath('//div[1][contains(@class,"setupDateAndTime completed")]'),msg='NTP settings did not complete')
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 365, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: //div[1][contains(@class,"setupDateAndTime completed")]
+
+]]>		</error>
+	</testcase>
+	<system-out>
+<![CDATA[]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

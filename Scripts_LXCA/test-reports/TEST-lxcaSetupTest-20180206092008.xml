@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="1" failures="1" name="lxcaSetupTest-20180206092008" skipped="0" tests="10" time="78.102">
+	<testcase classname="lxcaSetupTest" name="test_002_Create_User_Accounts" time="9.110"/>
+	<testcase classname="lxcaSetupTest" name="test_003_Configure_network_settings" time="15.586"/>
+	<testcase classname="lxcaSetupTest" name="test_004_Configure_NTP_settings" time="11.073"/>
+	<testcase classname="lxcaSetupTest" name="test_007_Callhome" time="2.064"/>
+	<testcase classname="lxcaSetupTest" name="test_008_Lenovo_Upload_Facility" time="7.103"/>
+	<testcase classname="lxcaSetupTest" name="test_009_warrenty" time="9.193"/>
+	<testcase classname="lxcaSetupTest" name="test_010_setup_Service_and_Support" time="0.123"/>
+	<testcase classname="lxcaSetupTest" name="test_011_Finish" time="5.150"/>
+	<testcase classname="lxcaSetupTest" name="test_001_Accepting_License_Agreement" time="7.427">
+		<failure message="&lt;selenium.webdriver.firefox.webelement.FirefoxWebElement (session=&quot;170b9476-3347-4755-9351-63e3d88fa5d9&quot;, element=&quot;312d7d04-f58c-4c94-9214-9474f92e1599&quot;)&gt; is not false" type="AssertionError">
+<![CDATA[Traceback (most recent call last):
+  File "C:\Python34\Scripts\eclipse-workspace\Scripts_LXCA\LXCA_Setup_test.py", line 30, in test_001_Accepting_License_Agreement
+    self.assertFalse(self.driver.find_element_by_xpath('//div[1][contains(@class, "floatLeft setupLicense completed")]'))
+AssertionError: <selenium.webdriver.firefox.webelement.FirefoxWebElement (session="170b9476-3347-4755-9351-63e3d88fa5d9", element="312d7d04-f58c-4c94-9214-9474f92e1599")> is not false
+]]>		</failure>
+	</testcase>
+	<testcase classname="lxcaSetupTest" name="test_006_Particapate" time="11.274">
+		<error message="Message: Unable to locate element: [id=&quot;dijit_form_RadioButton_1&quot;]
+" type="NoSuchElementException">
+<![CDATA[Traceback (most recent call last):
+  File "C:\Python34\Scripts\eclipse-workspace\Scripts_LXCA\LXCA_Setup_test.py", line 110, in test_006_Particapate
+    self.driver.find_element_by_id('dijit_form_RadioButton_1').click()
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 341, in find_element_by_id
+    return self.find_element(by=By.ID, value=id_)
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: [id="dijit_form_RadioButton_1"]
+
+]]>		</error>
+	</testcase>
+	<system-out>
+<![CDATA[]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

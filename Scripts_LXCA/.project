@@ -14,4 +14,11 @@
 	<natures>
 		<nature>org.python.pydev.pythonNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>Lxca_Initial_Setup_Test.py</name>
+			<type>1</type>
+			<location>C:/Users/tderr/Documents/UI automated test examples/Lxca_Initial_Setup_Test.py</location>
+		</link>
+	</linkedResources>
 </projectDescription>

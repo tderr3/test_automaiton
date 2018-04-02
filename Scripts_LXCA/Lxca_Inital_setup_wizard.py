@@ -9,11 +9,13 @@ from selenium.webdriver.common import action_chains, keys
 class Lxca_Initial_Setup_Test(unittest.TestCase):
     @classmethod
     def setUpClass(inst):
-        inst.driver = webdriver.Firefox()
-        inst.driver.implicitly_wait(10)
+        profile = webdriver.FirefoxProfile(os.path.normpath('c:/Automation_web/ffprofile/'))
+        profile.accept_untrusted_certs = True
+        inst.driver = webdriver.Firefox(profile)
+        inst.driver.implicitly_wait(5)
         inst.driver.maximize_window()
         #inst.driver.get('https://'+lxcaip)
-        inst.driver.get('https://10.243.12.162')
+        inst.driver.get('https://10.243.1.100')
         
 
     def test_001_Accepting_License_Agreement(self):
@@ -125,11 +127,11 @@ class Lxca_Initial_Setup_Test(unittest.TestCase):
         self.driver.find_element_by_xpath('//span/span/span/span[3][contains(text(),"No")]').click()
         time.sleep(4)
 
-    def test_011_test_fail_example(self):
+    '''def test_011_test_fail_example(self):
         self.assertEquals('Expected Results', 'Actual Results', msg= 'The Actual Results did not match the Expected Results')
 
     def test_012_test_error_example(self):
-        self.driver.find_element_by_id('some_fake_element')
+        self.driver.find_element_by_id('some_fake_element')'''
         
 
 

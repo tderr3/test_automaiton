@@ -15,7 +15,7 @@ class Lxca_Initial_Setup_Test(unittest.TestCase):
         inst.driver.implicitly_wait(5)
         inst.driver.maximize_window()
         #inst.driver.get('https://'+lxcaip)
-        inst.driver.get('https://10.243.1.100')
+        inst.driver.get('https://10.243.1.90')
         
 
     def test_001_Accepting_License_Agreement(self):

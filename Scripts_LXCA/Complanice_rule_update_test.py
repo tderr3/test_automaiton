@@ -55,10 +55,10 @@ class test_update_rule(unittest.TestCase):
     def test_002_update_rule_result_check(self):
         data = {"solutionGroups":["59A54997C18DCF0594B8AAAB"]}
         test1 = requests.post('https://'+condata[0]+'/compliance/compositeResults/', auth=(condata[1],condata[2]), verify=False, json=data)
-        resultsId = test1.json()['CompositeResults'][0]
+        resultsId = test1.json()[0][0]['id']
         complianceCheck = requests.get('https://'+condata[0]+'/compliance/compositeResults/'+resultsId, auth=(condata[1],condata[2]), verify=False)
         formatJson = json.loads(str(complianceCheck.text))
-        self.assertEqual(formatJson[0]['results'],False, msg='Results should be false. Please check to make sure nothing has powered the server off. Make sure the rule updated successfully in test_001')
+        self.assertEqual(formatJson['results'],False, msg='Results should be false. Please check to make sure nothing has powered the server off. Make sure the rule updated successfully in test_001')
             
     @classmethod        
     def tearDownClass(inst):

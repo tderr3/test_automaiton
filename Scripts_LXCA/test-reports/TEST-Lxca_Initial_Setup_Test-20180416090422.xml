@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="0" failures="0" name="Lxca_Initial_Setup_Test-20180416090422" skipped="0" tests="10" time="97.942">
+	<testcase classname="Lxca_Initial_Setup_Test" name="test_001_Accepting_License_Agreement" time="10.380"/>
+	<testcase classname="Lxca_Initial_Setup_Test" name="test_002_Create_User_Accounts" time="11.168"/>
+	<testcase classname="Lxca_Initial_Setup_Test" name="test_003_Configure_network_settings" time="16.692"/>
+	<testcase classname="Lxca_Initial_Setup_Test" name="test_004_Configure_NTP_settings" time="11.428"/>
+	<testcase classname="Lxca_Initial_Setup_Test" name="test_005_Usage_Data_settings" time="15.305"/>
+	<testcase classname="Lxca_Initial_Setup_Test" name="test_006_Callhome_settengs" time="7.152"/>
+	<testcase classname="Lxca_Initial_Setup_Test" name="test_007_Lenovo_Upload_Facility" time="7.179"/>
+	<testcase classname="Lxca_Initial_Setup_Test" name="test_008_warranty" time="13.309"/>
+	<testcase classname="Lxca_Initial_Setup_Test" name="test_009_setup_Service_and_Support" time="0.131"/>
+	<testcase classname="Lxca_Initial_Setup_Test" name="test_010_Finish" time="5.199"/>
+	<system-out>
+<![CDATA[]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>

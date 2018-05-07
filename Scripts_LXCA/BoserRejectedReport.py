@@ -1,4 +1,4 @@
-import requests, warnings, openpyxl
+import requests, warnings, openpyxl, os
 from openpyxl.styles import Font, Alignment, colors, Border, Side, Style
 
 warnings.filterwarnings('ignore')
@@ -19,27 +19,32 @@ def checkBugHistory(buglist):
     rejCount = 0
     suspectBugList=[]
     for bug in buglist:
-        print('\n')
+        #print('\n')
         print('******************Checking Bug #'+str(bug)+' now!****************************')
         search=requests.get(bz+'/rest/bug/'+str(bug)+'/history?&api_key='+key,verify=False)
         for change in search.json()['bugs'][0]['history']:
             for r in change['changes']:
                 if r['field_name'] == 'status' and r['added'] == 'Rejected':
-                    print('     Feid name is '+r['field_name'] + ' and '+r['added']+' was added')
+                    #print('     Feid name is '+r['field_name'] + ' and '+r['added']+' was added')
                     rejCount = rejCount + 1
-                    print('    Count is '+str(rejCount))
+                    #print('    Count is '+str(rejCount))
                     if rejCount >2:
                         suspectBugList.append(bug)
                         rejCount = 0
-                        print('        '+str(rejCount)+ ' should be Zero now')
-        print('*****Done with Bug# '+str(bug)+' counter is '+str(rejCount)+' Setting counter back to zero now*****')
-        print('\n')
+                        #print('        '+str(rejCount)+ ' should be Zero now')
+        #print('*****Done with Bug# '+str(bug)+' counter is '+str(rejCount)+' Setting counter back to zero now*****')
+        #print('\n')
         rejCount = 0
                         
     return suspectBugList
                         
                 
 def createReport(badBuglist):
+    try:
+        os.remove('Reject_Report.xlsx')
+    except Exception as ex:
+        print(ex)
+        
     print('generating report now')
     hFont=Font(name='Calibri(body)', size=13, bold=True, color=colors.BLUE)
     hBorder = Border(bottom=Side(style='thick',color=colors.BLACK))
@@ -48,6 +53,7 @@ def createReport(badBuglist):
     rowCount = 2
     wb = openpyxl.Workbook()
     sheet = wb.active
+    sheet.title = 'Overly_Rejected_Bugs'
     sheet['A1'] = 'Bugid'
     sheet['B1'] = 'Summary'
     sheet['C1'] = 'Bug Status'
@@ -64,18 +70,19 @@ def createReport(badBuglist):
     sheet['G1'].style = header
     for bug in badBuglist:
         search=requests.get(bz+'/rest/bug/'+str(bug)+'?&api_key='+key,verify=False)
-        sheet['A'+str(rowCount)] = search.json()['bugs'][0]['id']
-        sheet['B'+str(rowCount)].hyperlink = 'https://bz.labs.lenovo.com/show_bug.cgi?id='+str(bug)
-        sheet['B'+str(rowCount)].value = search.json()['bugs'][0]['summary']
-        sheet['B'+str(rowCount)].font= Font(color=colors.BLUE, italic=True)
+        sheet['A'+str(rowCount)].value = search.json()['bugs'][0]['id']
+        sheet['A'+str(rowCount)].hyperlink = 'https://bz.labs.lenovo.com/show_bug.cgi?id='+str(bug)
+        sheet['A'+str(rowCount)].font= Font(color=colors.BLUE)
+        sheet['B'+str(rowCount)] = search.json()['bugs'][0]['summary']
         sheet['C'+str(rowCount)] = search.json()['bugs'][0]['status']
         sheet['D'+str(rowCount)] = search.json()['bugs'][0]['product']
         sheet['E'+str(rowCount)] = search.json()['bugs'][0]['version']
         sheet['F'+str(rowCount)] = search.json()['bugs'][0]['creator']
         sheet['G'+str(rowCount)] = search.json()['bugs'][0]['assigned_to']
         rowCount = rowCount + 1
-    wb.save('Reject_Report.xlsx')
+    wb.save('c:\\pydata\\reports\\Reject_Report.xlsx')
+    
+
 list1 = getBugList()
 badBuglist = checkBugHistory(list1)
-print(badBuglist)
 createReport(badBuglist)

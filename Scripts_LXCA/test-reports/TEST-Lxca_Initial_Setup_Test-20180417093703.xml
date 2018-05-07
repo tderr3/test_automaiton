@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite errors="7" failures="0" name="Lxca_Initial_Setup_Test-20180417093703" skipped="0" tests="10" time="80.395">
+	<testcase classname="Lxca_Initial_Setup_Test" name="test_001_Accepting_License_Agreement" time="6.723"/>
+	<testcase classname="Lxca_Initial_Setup_Test" name="test_002_Create_User_Accounts" time="9.531"/>
+	<testcase classname="Lxca_Initial_Setup_Test" name="test_003_Configure_network_settings" time="16.029"/>
+	<testcase classname="Lxca_Initial_Setup_Test" name="test_004_Configure_NTP_settings" time="12.366">
+		<error message="Message: Unable to locate element: //div[1][contains(@class,&quot;setupDateAndTime completed&quot;)]
+" type="NoSuchElementException">
+<![CDATA[Traceback (most recent call last):
+  File "C:\Python34\localGitRepo\Scripts_LXCA\Lxca_Inital_setup_wizard.py", line 87, in test_004_Configure_NTP_settings
+    self.assertTrue(self.driver.find_element_by_xpath('//div[1][contains(@class,"setupDateAndTime completed")]'),msg='NTP configuration did not complete')
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 365, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: //div[1][contains(@class,"setupDateAndTime completed")]
+
+]]>		</error>
+	</testcase>
+	<testcase classname="Lxca_Initial_Setup_Test" name="test_005_Usage_Data_settings" time="7.143">
+		<error message="Message: Unable to locate element: //input[contains(@name,&quot;feedBackRadioOptions&quot;)][contains(@value,&quot;no&quot;)]
+" type="NoSuchElementException">
+<![CDATA[Traceback (most recent call last):
+  File "C:\Python34\localGitRepo\Scripts_LXCA\Lxca_Inital_setup_wizard.py", line 93, in test_005_Usage_Data_settings
+    self.driver.find_element_by_xpath('//input[contains(@name,"feedBackRadioOptions")][contains(@value,"no")]').click()
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 365, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: //input[contains(@name,"feedBackRadioOptions")][contains(@value,"no")]
+
+]]>		</error>
+	</testcase>
+	<testcase classname="Lxca_Initial_Setup_Test" name="test_006_Callhome_settengs" time="5.159">
+		<error message="Message: Unable to locate element: //span[3][contains(text(),&quot;Skip Step&quot;)]
+" type="NoSuchElementException">
+<![CDATA[Traceback (most recent call last):
+  File "C:\Python34\localGitRepo\Scripts_LXCA\Lxca_Inital_setup_wizard.py", line 102, in test_006_Callhome_settengs
+    self.driver.find_element_by_xpath('//span[3][contains(text(),"Skip Step")]').click()
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 365, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: //span[3][contains(text(),"Skip Step")]
+
+]]>		</error>
+	</testcase>
+	<testcase classname="Lxca_Initial_Setup_Test" name="test_007_Lenovo_Upload_Facility" time="5.077">
+		<error message="Message: Unable to locate element: //span/span[3][contains(text(),&quot;Skip Step&quot;)]
+" type="NoSuchElementException">
+<![CDATA[Traceback (most recent call last):
+  File "C:\Python34\localGitRepo\Scripts_LXCA\Lxca_Inital_setup_wizard.py", line 108, in test_007_Lenovo_Upload_Facility
+    self.driver.find_element_by_xpath('//span/span[3][contains(text(),"Skip Step")]').click()
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 365, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: //span/span[3][contains(text(),"Skip Step")]
+
+]]>		</error>
+	</testcase>
+	<testcase classname="Lxca_Initial_Setup_Test" name="test_008_warranty" time="7.134">
+		<error message="Message: Unable to locate element: //span[3][contains(text(),&quot;Skip Step&quot;)]
+" type="NoSuchElementException">
+<![CDATA[Traceback (most recent call last):
+  File "C:\Python34\localGitRepo\Scripts_LXCA\Lxca_Inital_setup_wizard.py", line 114, in test_008_warranty
+    self.driver.find_element_by_xpath('//span[3][contains(text(),"Skip Step")]').click()
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 365, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: //span[3][contains(text(),"Skip Step")]
+
+]]>		</error>
+	</testcase>
+	<testcase classname="Lxca_Initial_Setup_Test" name="test_009_setup_Service_and_Support" time="5.111">
+		<error message="Message: Unable to locate element: //div[1][contains(@class,&quot;floatLeft setupServiceAndSupport completed&quot;)]
+" type="NoSuchElementException">
+<![CDATA[Traceback (most recent call last):
+  File "C:\Python34\localGitRepo\Scripts_LXCA\Lxca_Inital_setup_wizard.py", line 121, in test_009_setup_Service_and_Support
+    self.assertTrue(self.driver.find_element_by_xpath('//div[1][contains(@class,"floatLeft setupServiceAndSupport completed")]'),msg='setup Service and Support did not complete')
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 365, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: //div[1][contains(@class,"floatLeft setupServiceAndSupport completed")]
+
+]]>		</error>
+	</testcase>
+	<testcase classname="Lxca_Initial_Setup_Test" name="test_010_Finish" time="6.122">
+		<error message="Message: Unable to locate element: //span/span/span/span[3][contains(text(),&quot;No&quot;)]
+" type="NoSuchElementException">
+<![CDATA[Traceback (most recent call last):
+  File "C:\Python34\localGitRepo\Scripts_LXCA\Lxca_Inital_setup_wizard.py", line 127, in test_010_Finish
+    self.driver.find_element_by_xpath('//span/span/span/span[3][contains(text(),"No")]').click()
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 365, in find_element_by_xpath
+    return self.find_element(by=By.XPATH, value=xpath)
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 843, in find_element
+    'value': value})['value']
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 308, in execute
+    self.error_handler.check_response(response)
+  File "C:\Python34\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 194, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: Unable to locate element: //span/span/span/span[3][contains(text(),"No")]
+
+]]>		</error>
+	</testcase>
+	<system-out>
+<![CDATA[]]>	</system-out>
+	<system-err>
+<![CDATA[]]>	</system-err>
+</testsuite>
